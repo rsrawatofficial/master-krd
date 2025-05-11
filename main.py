@@ -2,6 +2,7 @@ from config import Config
 from pyrogram import Client as bot, idle
 import asyncio
 import logging
+from flask import Flask
 
 logging.basicConfig(
     level=logging.INFO,    
