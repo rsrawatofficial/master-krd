@@ -13,6 +13,19 @@ LOGGER.info("Live log streaming to telegram.")
 
 plugins = dict(root="plugins")
 
+
+# Flask app for Render
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Bot is running!"
+
+def run_flask():
+    app.run(host="0.0.0.0", port=1000) #Use 8080 Port here, if you're deploying it on koyeb
+
+
+
 if __name__ == "__main__":
     bot = bot(
         "Bot",
